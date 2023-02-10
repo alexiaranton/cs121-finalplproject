@@ -1,6 +1,6 @@
 # kuhaa ang numero uno ug duha
 
-patik("Ibutang ang numero uno: )
+patik("Ibutang ang numero uno: ")
 BARYABOL namba_one = ikadugang_numero()
 patik(Ibutang ang numero duha: )
 BARYABOL namba_towo = ikadugang_numero()
