@@ -127,7 +127,7 @@ TT_NEWLINE		= 'NEWLINE'
 TT_EOF				= 'EOF'
 
 KEYWORDS = [
-  'BARYABOL',
+  'baryabol',
   'UG',
   'O',
   'DILI',
@@ -643,7 +643,7 @@ class Parser:
     if res.error:
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        "Expected 'BALIK', 'PADAYON', 'PIANG', 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
+        "Expected 'BALIK', 'PADAYON', 'PIANG', 'baryabol', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
       ))
     return res.success(expr)
 
@@ -748,7 +748,7 @@ class Parser:
         if res.error:
           return res.failure(InvalidSyntaxError(
             self.current_tok.pos_start, self.current_tok.pos_end,
-            "Nagdahom ug ')', 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
+            "Nagdahom ug ')', 'baryabol', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
           ))
 
         while self.current_tok.type == TT_COMMA:
@@ -855,7 +855,7 @@ class Parser:
       if res.error:
         return res.failure(InvalidSyntaxError(
           self.current_tok.pos_start, self.current_tok.pos_end,
-          "Nagdahom ug ']', 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
+          "Nagdahom ug ']', 'baryabol', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
         ))
 
       while self.current_tok.type == TT_COMMA:
@@ -2163,25 +2163,25 @@ class Interpreter:
 #######################################
 
 global_symbol_table = SymbolTable()
-global_symbol_table.set("NULL", Number.null)
-global_symbol_table.set("BAKAK", Number.false)
-global_symbol_table.set("TINUOD", Number.true)
-global_symbol_table.set("MATH_PI", Number.math_PI)
-global_symbol_table.set("PATIK", BuiltInFunction.print)
-global_symbol_table.set("PATIK_RET", BuiltInFunction.print_ret)
-global_symbol_table.set("IKADUGANG", BuiltInFunction.input)
-global_symbol_table.set("IKADUGANG_NUMERO", BuiltInFunction.input_int)
-global_symbol_table.set("TINAW", BuiltInFunction.clear)
-global_symbol_table.set("CLS", BuiltInFunction.clear)
-global_symbol_table.set("NUMERO_SIYA", BuiltInFunction.is_number)
-global_symbol_table.set("HILO_SIYA", BuiltInFunction.is_string)
-global_symbol_table.set("IS_LIST", BuiltInFunction.is_list)
-global_symbol_table.set("LINGAW_SIYA", BuiltInFunction.is_function)
-global_symbol_table.set("IDUGANG", BuiltInFunction.append)
-global_symbol_table.set("POP", BuiltInFunction.pop)
-global_symbol_table.set("IHATAG", BuiltInFunction.extend)
-global_symbol_table.set("TAAS", BuiltInFunction.len)
-global_symbol_table.set("DAGAN", BuiltInFunction.run)
+global_symbol_table.set("null", Number.null)
+global_symbol_table.set("bakak", Number.false)
+global_symbol_table.set("tinuod", Number.true)
+global_symbol_table.set("math_PI", Number.math_PI)
+global_symbol_table.set("patik", BuiltInFunction.print)
+global_symbol_table.set("patik_RET", BuiltInFunction.print_ret)
+global_symbol_table.set("ikadugang", BuiltInFunction.input)
+global_symbol_table.set("ikadugang_numero", BuiltInFunction.input_int)
+global_symbol_table.set("tingaw", BuiltInFunction.clear)
+global_symbol_table.set("cls", BuiltInFunction.clear)
+global_symbol_table.set("numero_siya", BuiltInFunction.is_number)
+global_symbol_table.set("hilo_siya", BuiltInFunction.is_string)
+global_symbol_table.set("is_lista", BuiltInFunction.is_list)
+global_symbol_table.set("kalihokan_siya", BuiltInFunction.is_function)
+global_symbol_table.set("idungag", BuiltInFunction.append)
+global_symbol_table.set("pop", BuiltInFunction.pop)
+global_symbol_table.set("ihatag", BuiltInFunction.extend)
+global_symbol_table.set("taas", BuiltInFunction.len)
+global_symbol_table.set("dagan", BuiltInFunction.run)
 
 def run(fn, text):
   # Generate tokens
