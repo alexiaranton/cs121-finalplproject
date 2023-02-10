@@ -1,0 +1,23 @@
+# Vawiables
+baryabol baka = 100
+baryabol awoo = "two"
+baryabol chan = 25
+baryabol baka = baka + 1
+baryabol awoo = 501
+baryabol chan = chan * 2
+
+patik(awoo)
+patik(baka)
+patik(chan)
+
+
+# Conditiwonals
+KUNG awoo == 502 IMBIS pwease chan = "awoo is 502!" LAINKUNG awoo == 501 IMBIS pwease chan = "awoo is 501!" LAIN pwease chan = "awoo is 500!"
+
+pwint(chan)
+
+
+# Lowop
+PARA i = 0 TO 5 IMBIS
+	pwint("UwU")
+HUMAN

@@ -1,0 +1,8 @@
+# Get A Nuwumber
+patik("Enter thew nuwumber of side of sqware: ")
+baryabol nuwumber = ikadugang_numero()
+
+# First Lowop
+PARA uwu = 0 TO nuwumber IMBIS
+    pwint("ω"*nuwumber)
+HUMAN

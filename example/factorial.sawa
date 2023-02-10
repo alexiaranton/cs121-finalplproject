@@ -1,0 +1,10 @@
+# Get A number
+patik("Enter thew nuwumber: ")
+baryabol nuwu = ikadugang_numero() 
+
+# FWUNCTION to Cawlcuwate Fwactorial
+kalihokan uwu(nuwu) -> KUNG nuwu < 0 IMBIS BALIK LAINKUNG nuwu <= 1 IMBIS BALIK 1 LAIN BALIK nuwu*uwu(nuwu-1)
+
+# Pwint the Awnswuw
+baryabol nwani = uwu(nuwu)
+patik(nwani)

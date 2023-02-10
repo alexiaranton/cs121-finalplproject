@@ -1,9 +1,9 @@
 # kuhaa ang numero uno ug duha
 
 patik("Ibutang ang numero uno: ")
-BARYABOL num1 = ikadugang_numero()
+baryabol num1 = ikadugang_numero()
 patik("Ibutang ang numero duha: ")
-BARYABOL num2 = ikadugang_numero()
+baryabol num2 = ikadugang_numero()
 patik("")
 
 patik("Unsa man na operasyon gusto nimo buhaton nako? ")
@@ -18,13 +18,13 @@ patik("4. Daghanon (Ibutang '4')")
 
 # get user input 
 
-BARYABOL operasyon = ikadugang()
+baryabol operasyon = ikadugang()
 patik("")
 
 patik("Ga-himo kog math...")
 
 #doing math
-BARYABOL solusyon = (KUNG operasyon == "1" IMBIS -(num1 + num2) LAINKUNG operasyon == "2" IMBIS (num1 - num2) LAINKUNG operasyon == "3" IMBIS (num1 / num2) LAINKUNG operasyon == "4" IMBIS (num1 * num2) LAIN "Mali oy! Pili ra from 1 to 4!")
+baryabol solusyon = (KUNG operasyon == "1" IMBIS -(num1 + num2) LAINKUNG operasyon == "2" IMBIS (num1 - num2) LAINKUNG operasyon == "3" IMBIS (num1 / num2) LAINKUNG operasyon == "4" IMBIS (num1 * num2) LAIN "Mali oy! Pili ra from 1 to 4!")
 
 #print solution
 patik("")
