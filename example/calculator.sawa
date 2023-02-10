@@ -1,0 +1,34 @@
+# kuhaa ang numero uno ug duha
+
+patik("Ibutang ang numero uno: )
+BARYABOL namba_one = ikadugang_numero()
+patik(Ibutang ang numero duha: )
+BARYABOL namba_towo = ikadugang_numero()
+patik("")
+
+patik("Unsa man na operasyon gusto nimo buhaton nako? ")
+patik("")
+
+# print operation
+
+patik("1. Pagdungag (Ibutang '1')")
+patik("2. Bawasan (Ibutang '2')")
+patik("3. Bahinon (Ibutang '3')")
+patik("4. Daghanon (Ibutang '4')")
+
+# get user input 
+
+BARYABOL operasyon = ikadugang()
+pwease opewation = inpwt()
+patik("")
+
+patik("Ga-himo kog math...")
+
+#doing math
+BARYABOL solution = (IF opewation == "1" IMBIS  (namba_one + namba_towo) LAINKUNG opewation == "2" IMBIS (namba_one - namba_towo) LAINKUNG opewation == "3" IMBIS (namba_one / namba_towo) LAINKUNG opewation == "4" IMBIS (namba_one * namba_towo) LAIN "Mali oy! Pili ra from 1 to 4!")
+
+#print solution
+patik("")
+patik("Ang solusyon kay: ")
+patik(solusyon)
+
