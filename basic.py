@@ -2,11 +2,14 @@
 # IMPORTS
 #######################################
 
-from strings_with_arrows import *
+
 
 import string
 import os
 import math
+import sys
+
+from strings_with_arrows import *
 
 #######################################
 # CONSTANTS
@@ -678,7 +681,7 @@ class Parser:
     if res.error:
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        "Nagdhom 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
+        "Nagdahom ug 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
       ))
 
     return res.success(node)
@@ -2193,7 +2196,7 @@ def run(fn, text):
 
   # Run program
   interpreter = Interpreter()
-  context = Context('<programa>')
+  context = Context('<program>')
   context.symbol_table = global_symbol_table
   result = interpreter.visit(ast.node, context)
 
