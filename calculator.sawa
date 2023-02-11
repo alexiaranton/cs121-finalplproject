@@ -1,0 +1,32 @@
+# kuhaa ang numero uno ug duha
+
+PATIK("Ibutang ang numero uno: ")
+BARYABOL num1 = IBUTANG_NUMERO()
+PATIK("Ibutang ang numero duha: ")
+BARYABOL num2 = IBUTANG_NUMERO()
+PATIK("")
+
+PATIK("Unsa man na operasyon gusto nimo buhaton nako? ")
+PATIK("")
+
+# print operation
+
+PATIK("1. Pagdungag (Ibutang '1')")
+PATIK("2. Bawasan (Ibutang '2')")
+PATIK("3. Bahinon (Ibutang '3')")
+PATIK("4. Daghanon (Ibutang '4')")
+
+# get user input
+
+BARYABOL operasyon = IBUTANG_NUMERO()
+PATIK("")
+
+PATIK("Ga-himo kog math...")
+
+#doing math
+BARYABOL solusyon = KUNG operasyon == 1 KAY (num1 + num2) PUWEDEPUD operasyon == 2 KAY (num1 - num2) PUWEDEPUD operasyon == 3 KAY (num1 / num2) PUWEDEPUD operasyon == 4 KAY (num1 * num2) KUNGDILI "Mali oy! Pili ra from 1 to 4!"
+
+#print solution
+PATIK("")
+PATIK("Ang solusyon kay: ")
+PATIK(solusyon)
