@@ -1,11 +1,11 @@
 # cs121-finalplproject
-Sawa: A Bisaya Programming Language 
+Sawa: A Bisaya Programming Language
 
 <p align="center">
-  <b>Sawa is a a new programming langauge founded in Python</b>
+  <b>Sawa is a new programming language based on Python</b>
 </p>
 
-<h2 align="center">Uwusage</h2>
+<h2 align="center">Usage</h2>
 
 <h4 align="left">Himo og bagong file - <code>test.sawa</code></h4>
 
@@ -39,19 +39,19 @@ Sige! Bidyohi ko!
 <p align="center"><code>python shell.py</code> opens the basic shell. Running <code>dagan("test.sawa")</code> from the shell execuwutes code from the file <code>test.sawa</code>.</p>
 
 <h3 align="center">Variables</h3>
-<p align="center">Variables can be declared using the keyword <code>baryabol</code>.</p>
+<p align="center">Variables can be declared using the keyword <code>BARYABOL</code>.</p>
 
 ```py
-baryabol baka = 100
-baryabol awoo = "two"
-baryabol chan = 25
-baryabol baka = baka + 1
-baryabol awoo = 500
-baryabol chan = chan * 2
+BARYABOL una = 100
+BARYABOL ikaduha = "two"
+BARYABOL ikatulo = 25
+BARYABOL una = una + 1
+BARYABOL ikaduha = 500
+BARYABOL ikatulo = ikatulo * 2
 
-patik(awoo)
-patik(baka)
-patik(chan)
+patik(ikaduha)
+patik(una)
+patik(ikatulo)
 ```
 
 <h4 align="left">Output</h4>
@@ -66,35 +66,35 @@ patik(chan)
 <p align="center">KUNG《condition》IMBIS《expression》LAINKUNG《condition》IMBIS《expression》</p>
 
 ```py
-baryabol awoo = 501
+BARYABOL ikaduha = 501
 
-KUNG awoo == 502 IMBIS baryabol chan = "awoo is 502!" LAINKUNG awoo == 501 IMBIS baryabol chan = "awoo is 501!" LAIN baryabol chan = "awoo is 500!"
+KUNG ikaduha == 502 IMBIS BARYABOL ikatulo = "ikaduha is 502!" LAINKUNG ikaduha == 501 IMBIS BARYABOL ikatulo = "ikaduha is 501!" LAIN BARYABOL ikatulo = "ikaduha is 500!"
 
-patik(chan)
+patik(ikatulo)
 ```
 
 h4 align="left">Output</h4>
 
 ```
-awoo is 501!
+ikaduha is 501!
 ```
 
 <h3 align="center">Loops</h3>
 
 ```py
 PARA i = 0 SA 5 IMBIS
-	patik("UwU")
+	patik("Sawa")
 HUMAN
 ```
 
 <h4 align="left">Output</h4>
 
 ```
-UwU
-UwU
-UwU
-UwU
-UwU
+Sawa
+Sawa
+Sawa
+Sawa
+Sawa
 ```
 
 
