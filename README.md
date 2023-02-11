@@ -101,13 +101,13 @@ Sawa
 <h3 align="center">Functions</h3>
 
 ```py
-KALIHOKAN owofy(pwefix) -> pwefix + "OwO"
+KALIHOKAN credits(text) -> text + " gihimo ni sa Sawa"
 
-patik(owofy("This is pyth"))
+patik(credits("Kaning program kay"))
 ```
 
 <h4 align="left">Output</h4>
 
 ```
-This is Sawa
+Kaning program kay gihimo ni sa Sawa
 ```
