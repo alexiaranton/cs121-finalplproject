@@ -1,6 +1,4 @@
 # cs121-finalplproject
-Sawa: A Bisaya Programming Language
-
 <p align="center">
   <b>Sawa is a new programming language based on Python</b>
 </p>
