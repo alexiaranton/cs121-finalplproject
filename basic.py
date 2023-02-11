@@ -38,19 +38,19 @@ class Error:
 
 class IllegalCharError(Error):
   def __init__(self, pos_start, pos_end, details):
-    super().__init__(pos_start, pos_end, 'Unsa mani? Illegal Character? Usabi!', details)
+    super().__init__(pos_start, pos_end, 'Unsa mani? Illegal Character? Usaba!', details)
 
 class ExpectedCharError(Error):
   def __init__(self, pos_start, pos_end, details):
-    super().__init__(pos_start, pos_end, 'Unsa mani? Expected Character? Usabi!', details)
+    super().__init__(pos_start, pos_end, 'Unsa mani? Expected Character? Usaba!', details)
 
 class InvalidSyntaxError(Error):
   def __init__(self, pos_start, pos_end, details=''):
-    super().__init__(pos_start, pos_end, 'Unsa mani? Invalid Syntax? Usabi!', details)
+    super().__init__(pos_start, pos_end, 'Unsa mani? Invalid Syntax? Usaba!', details)
 
 class RTError(Error):
   def __init__(self, pos_start, pos_end, details, context):
-    super().__init__(pos_start, pos_end, 'Unsa mani? Runtime Error? Usabi!', details)
+    super().__init__(pos_start, pos_end, 'Unsa mani? Runtime Error? Usaba!', details)
     self.context = context
 
   def as_string(self):
@@ -103,7 +103,7 @@ class Position:
 TT_INT				= 'NUMERO'
 TT_FLOAT    	= 'LUTAW'
 TT_STRING			= 'HILO'
-TT_IDENTIFIER	= 'ILHON'
+TT_IDENTIFIER	= 'TIGPAILA'
 TT_KEYWORD		= 'SUSIPULONG'
 TT_PLUS     	= 'DUGANG'
 TT_MINUS    	= 'GAMAY'
@@ -643,7 +643,7 @@ class Parser:
     if res.error:
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        "Expected 'BALIK', 'PADAYON', 'PIANG', 'baryabol', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
+        "Expected 'BALIK', 'PADAYON', 'PIANG', 'baryabol', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, tigpaila, '+', '-', '(', '[' or 'DILI'"
       ))
     return res.success(expr)
 
@@ -657,7 +657,7 @@ class Parser:
       if self.current_tok.type != TT_IDENTIFIER:
         return res.failure(InvalidSyntaxError(
           self.current_tok.pos_start, self.current_tok.pos_end,
-          "Nagdahom ug ilhon"
+          "Nagdahom ug tigpaila"
         ))
 
       var_name = self.current_tok
@@ -681,7 +681,7 @@ class Parser:
     if res.error:
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        "Nagdahom ug 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
+        "Nagdahom ug 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, tigpaila, '+', '-', '(', '[' or 'DILI'"
       ))
 
     return res.success(node)
@@ -703,7 +703,7 @@ class Parser:
     if res.error:
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        "Nagdahom ug numero, lutaw, ilhon, '+', '-', '(', '[', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW' or 'DILI'"
+        "Nagdahom ug numero, lutaw, tigpaila, '+', '-', '(', '[', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW' or 'DILI'"
       ))
 
     return res.success(node)
@@ -748,7 +748,7 @@ class Parser:
         if res.error:
           return res.failure(InvalidSyntaxError(
             self.current_tok.pos_start, self.current_tok.pos_end,
-            "Nagdahom ug ')', 'baryabol', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
+            "Nagdahom ug ')', 'baryabol', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, tigpaila, '+', '-', '(', '[' or 'DILI'"
           ))
 
         while self.current_tok.type == TT_COMMA:
@@ -830,7 +830,7 @@ class Parser:
 
     return res.failure(InvalidSyntaxError(
       tok.pos_start, tok.pos_end,
-      "Nagdahom ug numero, lutaw, ilhon, '+', '-', '(', '[', KUNG', 'PARA', 'SAMTANG', 'LINGAW'"
+      "Nagdahom ug numero, lutaw, tigpaila, '+', '-', '(', '[', KUNG', 'PARA', 'SAMTANG', 'LINGAW'"
     ))
 
   def list_expr(self):
@@ -855,7 +855,7 @@ class Parser:
       if res.error:
         return res.failure(InvalidSyntaxError(
           self.current_tok.pos_start, self.current_tok.pos_end,
-          "Nagdahom ug ']', 'baryabol', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, ilhon, '+', '-', '(', '[' or 'DILI'"
+          "Nagdahom ug ']', 'baryabol', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', numero, lutaw, tigpaila, '+', '-', '(', '[' or 'DILI'"
         ))
 
       while self.current_tok.type == TT_COMMA:
@@ -1004,7 +1004,7 @@ class Parser:
     if self.current_tok.type != TT_IDENTIFIER:
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        f"Nagdahom ug ilhon"
+        f"Nagdahom ug tigpaila"
       ))
 
     var_name = self.current_tok
@@ -1149,7 +1149,7 @@ class Parser:
       if self.current_tok.type != TT_LPAREN:
         return res.failure(InvalidSyntaxError(
           self.current_tok.pos_start, self.current_tok.pos_end,
-          f"Nagdahom ug ilhon o '('"
+          f"Nagdahom ug tigpaila o '('"
         ))
     
     res.register_advancement()
@@ -1168,7 +1168,7 @@ class Parser:
         if self.current_tok.type != TT_IDENTIFIER:
           return res.failure(InvalidSyntaxError(
             self.current_tok.pos_start, self.current_tok.pos_end,
-            f"Nagdahom ug ilhon"
+            f"Nagdahom ug tigpaila"
           ))
 
         arg_name_toks.append(self.current_tok)
@@ -1184,7 +1184,7 @@ class Parser:
       if self.current_tok.type != TT_RPAREN:
         return res.failure(InvalidSyntaxError(
           self.current_tok.pos_start, self.current_tok.pos_end,
-          f"Nagdahom ug ilhon o ')'"
+          f"Nagdahom ug tigpaila o ')'"
         ))
 
     res.register_advancement()
