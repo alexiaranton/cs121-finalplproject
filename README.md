@@ -36,7 +36,7 @@ Sige! Bidyohi ko!
 
 <h3 align="center">General</h3>
 
-<p align="center"><code>python shell.py</code> opens the basic shell. Running <code>dagan("test.sawa")</code> from the shell execuwutes code from the file <code>test.sawa</code>.</p>
+<p align="center"><code>python shell.py</code> opens the basic shell. Running <code>dagan("test.sawa")</code> from the shell executes code from the file <code>test.sawa</code>.</p>
 
 <h3 align="center">Variables</h3>
 <p align="center">Variables can be declared using the keyword <code>BARYABOL</code>.</p>
