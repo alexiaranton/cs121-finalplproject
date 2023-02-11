@@ -61,7 +61,7 @@ PATIK(ikatulo)
 ```
 
 <h3 align="center">Conditionals</h3>
-<p align="center">KUNG《condition》IMBIS《expression》LAINKUNG《condition》IMBIS《expression》</p>
+<p align="center">KUNG《condition》KAY《expression》PUWEDEPUD《condition》KAY《expression》KUNGDILI《expression</p>
 
 ```py
 BARYABOL ikaduha = 501
