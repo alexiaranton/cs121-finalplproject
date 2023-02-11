@@ -73,7 +73,7 @@ KUNG ikaduha == 502 IMBIS BARYABOL ikatulo = "ikaduha is 502!" LAINKUNG ikaduha 
 PATIK(ikatulo)
 ```
 
-<h4> align="left">Output</h4>
+<h4 align="left">Output</h4>
 
 ```
 ikaduha is 501!
