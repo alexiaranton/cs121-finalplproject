@@ -1,0 +1,17 @@
+KALIHOKAN una(pulihan) -> (pulihan * 9/5) + 32
+KALIHOKAN ikaduha(pulihan) -> (pulihan - 32) * 5/9
+
+PATIK("Unsa man imong himoon? ")
+PATIK("")
+PATIK("Celsius -> fahrenheit (1)")
+PATIK("Fahrenheit -> celsius (2)")
+PATIK("")
+
+BARYABOL operasyon = IBUTANG_NUMERO()
+PATIK("")
+
+PATIK("Unsa man nga numero?")
+BARYABOL pulihan = IBUTANG_NUMERO()
+PATIK("")
+
+KUNG operasyon == 1 KAY PATIK(una(pulihan)) PUWEDEPUD operasyon == 2 KAY PATIK(ikaduha(pulihan)) KUNGDILI PATIK("Daw wala mana sa gipapilian??")
