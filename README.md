@@ -21,7 +21,7 @@ python basic.py test.sawa
 Or run in an interactive shell:
 ```sh
 python shell.py
-> dagan("test.sawa")
+> DAGAN("test.sawa")
 ```
 
 <h4 align="left">Output</h4>
@@ -34,7 +34,7 @@ Sige! Bidyohi ko!
 
 <h3 align="center">General</h3>
 
-<p align="center"><code>python shell.py</code> opens the basic shell. Running <code>dagan("test.sawa")</code> from the shell executes code from the file <code>test.sawa</code>.</p>
+<p align="center"><code>python shell.py</code> opens the basic shell. Running <code>DAGAN("test.sawa")</code> from the shell executes code from the file <code>test.sawa</code>.</p>
 
 <h3 align="center">Variables</h3>
 <p align="center">Variables can be declared using the keyword <code>BARYABOL</code>.</p>
@@ -61,12 +61,12 @@ PATIK(ikatulo)
 ```
 
 <h3 align="center">Conditionals</h3>
-<p align="center">KUNG《condition》IMBIS《expression》LAINKUNG《condition》IMBIS《expression》</p>
+<p align="center">KUNG《condition》KAY《expression》PUWEDEPUD《condition》KAY《expression》KUNGDILI《expression》</p>
 
 ```py
 BARYABOL ikaduha = 501
 
-KUNG ikaduha == 502 IMBIS BARYABOL ikatulo = "ikaduha is 502!" LAINKUNG ikaduha == 501 IMBIS BARYABOL ikatulo = "ikaduha is 501!" LAIN BARYABOL ikatulo = "ikaduha is 500!"
+KUNG ikaduha == 502 KAY BARYABOL ikatulo = "ikaduha is 502!" PUWEDEPUD ikaduha == 501 KAY BARYABOL ikatulo = "ikaduha is 501!" KUNGDILI BARYABOL ikatulo = "ikaduha is 500!"
 
 PATIK(ikatulo)
 ```
@@ -80,7 +80,7 @@ ikaduha is 501!
 <h3 align="center">Loops</h3>
 
 ```py
-PARA i = 0 SA 5 IMBIS
+PARA i = 0 SA 5 KAY
 	PATIK("Sawa")
 HUMAN
 ```

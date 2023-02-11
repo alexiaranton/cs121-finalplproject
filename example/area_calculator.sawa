@@ -1,0 +1,6 @@
+PATIK("Unsa ka laba: ")
+BARYABOL taas = IBUTANG_NUMERO()
+PATIK("Unsa ka lapad: ")
+BARYABOL lapad = IBUTANG_NUMERO()
+PATIK("")
+PATIK(taas * lapad)
