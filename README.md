@@ -7,7 +7,7 @@ Sawa: A Bisaya Programming Language
 
 <h2 align="center">Usage</h2>
 
-<h4 align="left">Himo og bagong file - <code>test.sawa</code></h4>
+<h4 align="left">Create a new file - <code>test.sawa</code></h4>
 
 ```py
 PATIK("Agoy!")
