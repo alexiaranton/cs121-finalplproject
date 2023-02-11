@@ -1,6 +1,6 @@
 # Get A Nuwumber 
 patik("Isulod and numero sa mga gilid sa square: ")
-baryabol nuwumber = ikadugang_numero()
+baryabol Numero = ikadugang_numero()
 
 # First Lowop
 PARA uwu = 0 TO nuwumber IMBIS
