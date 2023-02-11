@@ -1,16 +1,14 @@
 # cs121-finalplproject
-Sawa: A Bisaya Programming Language
-
 <p align="center">
   <b>Sawa is a new programming language based on Python</b>
 </p>
 
 <h2 align="center">Usage</h2>
 
-<h4 align="left">Himo og bagong file - <code>test.sawa</code></h4>
+<h4 align="left">Create a new file - <code>test.sawa</code></h4>
 
 ```py
-patik("Agoy!")
+PATIK("Agoy!")
 ```
 
 <h4 align="left">Dagan</h4>
@@ -49,9 +47,9 @@ BARYABOL una = una + 1
 BARYABOL ikaduha = 500
 BARYABOL ikatulo = ikatulo * 2
 
-patik(ikaduha)
-patik(una)
-patik(ikatulo)
+PATIK(ikaduha)
+PATIK(una)
+PATIK(ikatulo)
 ```
 
 <h4 align="left">Output</h4>
@@ -70,10 +68,10 @@ BARYABOL ikaduha = 501
 
 KUNG ikaduha == 502 IMBIS BARYABOL ikatulo = "ikaduha is 502!" LAINKUNG ikaduha == 501 IMBIS BARYABOL ikatulo = "ikaduha is 501!" LAIN BARYABOL ikatulo = "ikaduha is 500!"
 
-patik(ikatulo)
+PATIK(ikatulo)
 ```
 
-h4 align="left">Output</h4>
+<h4 align="left">Output</h4>
 
 ```
 ikaduha is 501!
@@ -83,7 +81,7 @@ ikaduha is 501!
 
 ```py
 PARA i = 0 SA 5 IMBIS
-	patik("Sawa")
+	PATIK("Sawa")
 HUMAN
 ```
 
@@ -101,13 +99,13 @@ Sawa
 <h3 align="center">Functions</h3>
 
 ```py
-KALIHOKAN owofy(pwefix) -> pwefix + "OwO"
+KALIHOKAN credits(text) -> text + " gihimo ni sa Sawa"
 
-patik(owofy("This is pyth"))
+PATIK(credits("Kaning program kay"))
 ```
 
 <h4 align="left">Output</h4>
 
 ```
-This is Sawa
+Kaning program kay gihimo ni sa Sawa
 ```
