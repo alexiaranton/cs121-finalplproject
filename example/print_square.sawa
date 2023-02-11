@@ -1,5 +1,5 @@
-# Get A Nuwumber
-patik("Enter thew nuwumber of side of sqware: ")
+# Get A Nuwumber 
+patik("Isulod and numero sa mga gilid sa square: ")
 baryabol nuwumber = ikadugang_numero()
 
 # First Lowop
