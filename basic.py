@@ -132,7 +132,7 @@ KEYWORDS = [
   'O',
   'DILI',
   'KUNG',
-  'LAINKUNG',
+  'PWEDEPUD',
   'LAIN',
   'PARA',
   'SA',
@@ -888,7 +888,7 @@ class Parser:
     return res.success(IfNode(cases, else_case))
 
   def if_expr_b(self):
-    return self.if_expr_cases('LAINKUNG')
+    return self.if_expr_cases('PWEDEPUD')
     
   def if_expr_c(self):
     res = ParseResult()
@@ -925,7 +925,7 @@ class Parser:
     res = ParseResult()
     cases, else_case = [], None
 
-    if self.current_tok.matches(TT_KEYWORD, 'LAINKUNG'):
+    if self.current_tok.matches(TT_KEYWORD, 'PWEDEPUD'):
       all_cases = res.register(self.if_expr_b())
       if res.error: return res
       cases, else_case = all_cases
