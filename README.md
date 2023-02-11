@@ -80,7 +80,7 @@ ikaduha is 501!
 <h3 align="center">Loops</h3>
 
 ```py
-PARA i = 0 SA 5 IMBIS
+PARA i = 0 SA 5 KAY
 	PATIK("Sawa")
 HUMAN
 ```
