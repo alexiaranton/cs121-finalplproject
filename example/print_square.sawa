@@ -1,8 +1,8 @@
-# Get A Nuwumber 
-patik("Isulod and numero sa mga gilid sa square: ")
-baryabol Numero = ikadugang_numero()
+# Get A Number
+PATIK("Isulod and numero sa mga gilid sa square: ")
+BARYABOL numero = IBUTANG_NUMERO()
 
-# First Lowop
-PARA uwu = 0 TO nuwumber IMBIS
-    pwint("ω"*nuwumber)
+# First Loop
+PARA i = 0 SA numero KAY
+    PATIK("ω"*numero)
 HUMAN
