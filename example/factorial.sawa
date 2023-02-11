@@ -1,10 +1,12 @@
 # Get A number
-patik("Enter thew nuwumber: ")
-baryabol nuwu = ikadugang_numero() 
+PATIK("Enter the number: ")
+BARYABOL num = IBUTANG_NUMERO()
+BARYABOL mali = "Mali imong gibutang"
 
-# FWUNCTION to Cawlcuwate Fwactorial
-kalihokan uwu(nuwu) -> KUNG nuwu < 0 IMBIS BALIK LAINKUNG nuwu <= 1 IMBIS BALIK 1 LAIN BALIK nuwu*uwu(nuwu-1)
+# FUNCTION to CalcuLate Factorial
+KALIHOKAN func(num) -> KUNG num == 1 KAY IBALIK num PUWEDEPUD num < 1 KAY IBALIK mali KUNGDILI IBALIK num*func(num-1)
 
-# Pwint the Awnswuw
-baryabol nwani = uwu(nuwu)
-patik(nwani)
+# Print the Answer
+BARYABOL fact = func(num)
+PATIK(fact)
+PATIK("")
