@@ -102,7 +102,7 @@ class Position:
 
 TT_INT				= 'NUMERO'
 TT_FLOAT    	= 'LUTAW'
-TT_STRING			= 'HILO'
+TT_STRING			= 'SULAT'
 TT_IDENTIFIER	= 'TIGPAILA'
 TT_KEYWORD		= 'SUSIPULONG'
 TT_PLUS     	= 'DUGANG'
@@ -132,7 +132,7 @@ KEYWORDS = [
   'O',
   'DILI',
   'KUNG',
-  'LAINKUNG',
+  'KAY',
   'LAIN',
   'PARA',
   'SA',
@@ -888,7 +888,7 @@ class Parser:
     return res.success(IfNode(cases, else_case))
 
   def if_expr_b(self):
-    return self.if_expr_cases('LAINKUNG')
+    return self.if_expr_cases('KAY')
     
   def if_expr_c(self):
     res = ParseResult()
@@ -925,7 +925,7 @@ class Parser:
     res = ParseResult()
     cases, else_case = [], None
 
-    if self.current_tok.matches(TT_KEYWORD, 'LAINKUNG'):
+    if self.current_tok.matches(TT_KEYWORD, 'KAY'):
       all_cases = res.register(self.if_expr_b())
       if res.error: return res
       cases, else_case = all_cases
@@ -1863,7 +1863,7 @@ BuiltInFunction.input       = BuiltInFunction("ikadugang")
 BuiltInFunction.input_int   = BuiltInFunction("ikadugang_numero")
 BuiltInFunction.clear       = BuiltInFunction("tinaw")
 BuiltInFunction.is_number   = BuiltInFunction("numero_siya")
-BuiltInFunction.is_string   = BuiltInFunction("hilo_siya")
+BuiltInFunction.is_string   = BuiltInFunction("sulat_siya")
 BuiltInFunction.is_list     = BuiltInFunction("is_lista")
 BuiltInFunction.is_function = BuiltInFunction("kalihokon_siya")
 BuiltInFunction.append      = BuiltInFunction("idugang")
@@ -2174,7 +2174,7 @@ global_symbol_table.set("ikadugang_numero", BuiltInFunction.input_int)
 global_symbol_table.set("tingaw", BuiltInFunction.clear)
 global_symbol_table.set("cls", BuiltInFunction.clear)
 global_symbol_table.set("numero_siya", BuiltInFunction.is_number)
-global_symbol_table.set("hilo_siya", BuiltInFunction.is_string)
+global_symbol_table.set("sulat_siya", BuiltInFunction.is_string)
 global_symbol_table.set("is_lista", BuiltInFunction.is_list)
 global_symbol_table.set("kalihokan_siya", BuiltInFunction.is_function)
 global_symbol_table.set("idungag", BuiltInFunction.append)
