@@ -10,7 +10,7 @@ Sawa: A Bisaya Programming Language
 <h4 align="left">Himo og bagong file - <code>test.sawa</code></h4>
 
 ```py
-patik("Agoy!")
+PATIK("Agoy!")
 ```
 
 <h4 align="left">Dagan</h4>
@@ -49,9 +49,9 @@ BARYABOL una = una + 1
 BARYABOL ikaduha = 500
 BARYABOL ikatulo = ikatulo * 2
 
-patik(ikaduha)
-patik(una)
-patik(ikatulo)
+PATIK(ikaduha)
+PATIK(una)
+PATIK(ikatulo)
 ```
 
 <h4 align="left">Output</h4>
@@ -70,7 +70,7 @@ BARYABOL ikaduha = 501
 
 KUNG ikaduha == 502 IMBIS BARYABOL ikatulo = "ikaduha is 502!" LAINKUNG ikaduha == 501 IMBIS BARYABOL ikatulo = "ikaduha is 501!" LAIN BARYABOL ikatulo = "ikaduha is 500!"
 
-patik(ikatulo)
+PATIK(ikatulo)
 ```
 
 <h4> align="left">Output</h4>
@@ -83,7 +83,7 @@ ikaduha is 501!
 
 ```py
 PARA i = 0 SA 5 IMBIS
-	patik("Sawa")
+	PATIK("Sawa")
 HUMAN
 ```
 
@@ -103,7 +103,7 @@ Sawa
 ```py
 KALIHOKAN credits(text) -> text + " gihimo ni sa Sawa"
 
-patik(credits("Kaning program kay"))
+PATIK(credits("Kaning program kay"))
 ```
 
 <h4 align="left">Output</h4>
