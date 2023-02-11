@@ -66,7 +66,7 @@ PATIK(ikatulo)
 ```py
 BARYABOL ikaduha = 501
 
-KUNG ikaduha == 502 IMBIS BARYABOL ikatulo = "ikaduha is 502!" LAINKUNG ikaduha == 501 IMBIS BARYABOL ikatulo = "ikaduha is 501!" LAIN BARYABOL ikatulo = "ikaduha is 500!"
+KUNG ikaduha == 502 KAY BARYABOL ikatulo = "ikaduha is 502!" PUWEDEPUD ikaduha == 501 KAY BARYABOL ikatulo = "ikaduha is 501!" KUNGDILI BARYABOL ikatulo = "ikaduha is 500!"
 
 PATIK(ikatulo)
 ```
