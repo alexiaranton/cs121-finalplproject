@@ -132,14 +132,14 @@ KEYWORDS = [
   'O',
   'DILI',
   'KUNG',
-  'KAY',
+  'LAINKUNG',
   'LAIN',
   'PARA',
   'SA',
   'LAKANG',
   'SAMTANG',
   'LINGAW',
-  'IMBIS',
+  'KAY',
   'HUMAN',
   'BALIK',
   'PADAYON',
@@ -888,7 +888,7 @@ class Parser:
     return res.success(IfNode(cases, else_case))
 
   def if_expr_b(self):
-    return self.if_expr_cases('KAY')
+    return self.if_expr_cases('LAINKUNG')
     
   def if_expr_c(self):
     res = ParseResult()
@@ -925,7 +925,7 @@ class Parser:
     res = ParseResult()
     cases, else_case = [], None
 
-    if self.current_tok.matches(TT_KEYWORD, 'KAY'):
+    if self.current_tok.matches(TT_KEYWORD, 'LAINKUNG'):
       all_cases = res.register(self.if_expr_b())
       if res.error: return res
       cases, else_case = all_cases
@@ -952,10 +952,10 @@ class Parser:
     condition = res.register(self.expr())
     if res.error: return res
 
-    if not self.current_tok.matches(TT_KEYWORD, 'IMBIS'):
+    if not self.current_tok.matches(TT_KEYWORD, 'KAY'):
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        f"Nagdahom ug 'IMBIS'"
+        f"Nagdahom ug 'KAY'"
       ))
 
     res.register_advancement()
@@ -1044,10 +1044,10 @@ class Parser:
     else:
       step_value = None
 
-    if not self.current_tok.matches(TT_KEYWORD, 'IMBIS'):
+    if not self.current_tok.matches(TT_KEYWORD, 'KAY'):
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        f"Nagdahom ug 'IMBIS'"
+        f"Nagdahom ug 'KAY'"
       ))
 
     res.register_advancement()
@@ -1091,10 +1091,10 @@ class Parser:
     condition = res.register(self.expr())
     if res.error: return res
 
-    if not self.current_tok.matches(TT_KEYWORD, 'IMBIS'):
+    if not self.current_tok.matches(TT_KEYWORD, 'KAY'):
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        f"Nagdahom ug 'IMBIS'"
+        f"Nagdahom ug 'KAY'"
       ))
 
     res.register_advancement()
