@@ -133,7 +133,7 @@ KEYWORDS = [
   'DILI',
   'KUNG',
   'PWEDEPUD',
-  'LAIN',
+  'KUNGDILI',
   'PARA',
   'SA',
   'LAKANG',
@@ -894,7 +894,7 @@ class Parser:
     res = ParseResult()
     else_case = None
 
-    if self.current_tok.matches(TT_KEYWORD, 'LAIN'):
+    if self.current_tok.matches(TT_KEYWORD, 'KUNGDILI'):
       res.register_advancement()
       self.advance()
 
