@@ -143,10 +143,10 @@ KEYWORDS = [
     'SA',
     'LAKANG',
     'SAMTANG',
-    'LINGAW',
+    'KALIHOKAN',
     'KAY',
     'HUMAN',
-    'BALIK',
+    'IBALIK',
     'PADAYON',
     'PUTOL',
     'PATAY'
@@ -645,7 +645,7 @@ class Parser:
         res = ParseResult()
         pos_start = self.current_tok.pos_start.copy()
 
-        if self.current_tok.matches(TT_SUSIPULONG, 'BALIK'):
+        if self.current_tok.matches(TT_SUSIPULONG, 'IBALIK'):
             res.register_advancement()
             self.advance()
 
@@ -668,7 +668,7 @@ class Parser:
         if res.error:
             return res.failure(InvalidSyntaxError(
                 self.current_tok.pos_start, self.current_tok.pos_end,
-                "Expected 'BALIK', 'PADAYON', 'PUTOL', 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', int, float, identifier, '+', '-', '(', '[' o 'DILI'"
+                "Expected 'IBALIK', 'PADAYON', 'PUTOL', 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'KALIHOKAN', int, float, identifier, '+', '-', '(', '[' o 'DILI'"
             ))
         return res.success(expr)
 
@@ -676,6 +676,7 @@ class Parser:
         res = ParseResult()
 
         if self.current_tok.matches(TT_SUSIPULONG, 'PATAY'):
+            print('\nGipatay...\n')
             sys.exit()
 
         if self.current_tok.matches(TT_SUSIPULONG, 'BARYABOL'):
@@ -709,7 +710,7 @@ class Parser:
         if res.error:
             return res.failure(InvalidSyntaxError(
                 self.current_tok.pos_start, self.current_tok.pos_end,
-                "Expected 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', int, float, identifier, '+', '-', '(', '[' o 'DILI'"
+                "Expected 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'KALIHOKAN', int, float, identifier, '+', '-', '(', '[' o 'DILI'"
             ))
 
         return res.success(node)
@@ -731,7 +732,7 @@ class Parser:
         if res.error:
             return res.failure(InvalidSyntaxError(
                 self.current_tok.pos_start, self.current_tok.pos_end,
-                "Expected int, float, identifier, '+', '-', '(', '[', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW' o 'DILI'"
+                "Expected int, float, identifier, '+', '-', '(', '[', 'KUNG', 'PARA', 'SAMTANG', 'KALIHOKAN' o 'DILI'"
             ))
 
         return res.success(node)
@@ -776,7 +777,7 @@ class Parser:
                 if res.error:
                     return res.failure(InvalidSyntaxError(
                         self.current_tok.pos_start, self.current_tok.pos_end,
-                        "Expected ')', 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', int, float, identifier, '+', '-', '(', '[' o 'DILI'"
+                        "Expected ')', 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'KALIHOKAN', int, float, identifier, '+', '-', '(', '[' o 'DILI'"
                     ))
 
                 while self.current_tok.type == TT_KOMA:
@@ -851,14 +852,14 @@ class Parser:
             if res.error: return res
             return res.success(while_expr)
 
-        elif tok.matches(TT_SUSIPULONG, 'LINGAW'):
+        elif tok.matches(TT_SUSIPULONG, 'KALIHOKAN'):
             func_def = res.register(self.func_def())
             if res.error: return res
             return res.success(func_def)
 
         return res.failure(InvalidSyntaxError(
             tok.pos_start, tok.pos_end,
-            "Expected int, float, identifier, '+', '-', '(', '[', IF', 'PARA', 'SAMTANG', o 'LINGAW'"
+            "Expected int, float, identifier, '+', '-', '(', '[', IF', 'PARA', 'SAMTANG', o 'KALIHOKAN'"
         ))
 
     def list_expr(self):
@@ -883,7 +884,7 @@ class Parser:
             if res.error:
                 return res.failure(InvalidSyntaxError(
                     self.current_tok.pos_start, self.current_tok.pos_end,
-                    "Expected ']', 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'LINGAW', int, float, identifier, '+', '-', '(', '[' o 'DILI'"
+                    "Expected ']', 'BARYABOL', 'KUNG', 'PARA', 'SAMTANG', 'KALIHOKAN', int, float, identifier, '+', '-', '(', '[' o 'DILI'"
                 ))
 
             while self.current_tok.type == TT_KOMA:
@@ -1154,10 +1155,10 @@ class Parser:
     def func_def(self):
         res = ParseResult()
 
-        if not self.current_tok.matches(TT_SUSIPULONG, 'LINGAW'):
+        if not self.current_tok.matches(TT_SUSIPULONG, 'KALIHOKAN'):
             return res.failure(InvalidSyntaxError(
                 self.current_tok.pos_start, self.current_tok.pos_end,
-                f"Expected 'LINGAW'"
+                f"Expected 'KALIHOKAN'"
             ))
 
         res.register_advancement()
@@ -1695,7 +1696,7 @@ class Function(BaseFunction):
         return copy
 
     def __repr__(self):
-        return f"<function {self.name}>"
+        return f"<KALIHOKAN {self.name}>"
 
 
 class BuiltInFunction(BaseFunction):
@@ -2233,7 +2234,7 @@ global_symbol_table.set("CLS", BuiltInFunction.clear)
 global_symbol_table.set("KAY_NUMERO", BuiltInFunction.is_number)
 global_symbol_table.set("KAY_SULAT", BuiltInFunction.is_string)
 global_symbol_table.set("KAY_LISTAHAN", BuiltInFunction.is_list)
-global_symbol_table.set("KAY_LINGAW", BuiltInFunction.is_function)
+global_symbol_table.set("KAY_KALIHOKAN", BuiltInFunction.is_function)
 global_symbol_table.set("IDUGANG", BuiltInFunction.append)
 global_symbol_table.set("BUTO", BuiltInFunction.pop)
 global_symbol_table.set("PATAS-ON", BuiltInFunction.extend)
