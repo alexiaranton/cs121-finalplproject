@@ -21,7 +21,7 @@ python basic.py test.sawa
 Or run in an interactive shell:
 ```sh
 python shell.py
-> dagan("test.sawa")
+> DAGAN("test.sawa")
 ```
 
 <h4 align="left">Output</h4>
@@ -34,7 +34,7 @@ Sige! Bidyohi ko!
 
 <h3 align="center">General</h3>
 
-<p align="center"><code>python shell.py</code> opens the basic shell. Running <code>dagan("test.sawa")</code> from the shell executes code from the file <code>test.sawa</code>.</p>
+<p align="center"><code>python shell.py</code> opens the basic shell. Running <code>DAGAN("test.sawa")</code> from the shell executes code from the file <code>test.sawa</code>.</p>
 
 <h3 align="center">Variables</h3>
 <p align="center">Variables can be declared using the keyword <code>BARYABOL</code>.</p>
