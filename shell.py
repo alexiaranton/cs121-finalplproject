@@ -1,9 +1,9 @@
 import basic
 
 while True:
-	text = input('Sawa > ')
+	text = input('Sawa >>> ')
 	if text.strip() == "": continue
-	result, error = basic.run('<stdin>', text)
+	result, error = basic.run('<SAWA>', text)
 
 	if error:
 		print(error.as_string())
