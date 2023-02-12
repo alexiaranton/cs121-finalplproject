@@ -10,8 +10,15 @@ PATIK("")
 BARYABOL operasyon = IBUTANG_NUMERO()
 PATIK("")
 
+SAMTANG operasyon>2 O operasyon<1 KAY
+    PATIK("Daw wala mana sa gipapilian? Usaba!")
+    BARYABOL operasyon = IBUTANG_NUMERO()
+    PATIK("")
+HUMAN
+
 PATIK("Unsa man nga numero?")
 BARYABOL pulihan = IBUTANG_NUMERO()
 PATIK("")
 
-KUNG operasyon == 1 KAY PATIK(una(pulihan)) PUWEDEPUD operasyon == 2 KAY PATIK(ikaduha(pulihan)) KUNGDILI PATIK("Daw wala mana sa gipapilian??")
+KUNG operasyon == 1 KAY PATIK(una(pulihan)) KUNGDILI PATIK(ikaduha(pulihan))
+PATIK("")
