@@ -15,7 +15,7 @@ PATIK("Agoy!")
 
 Either run from the interpreter directly:
 ```sh
-python basic.py test.sawa
+python sawa.py test.sawa
 ```
 
 Or run in an interactive shell:
