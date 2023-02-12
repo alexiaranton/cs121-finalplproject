@@ -11,22 +11,29 @@ PATIK("")
 
 # print operation
 
-PATIK("1. Pagdungag (Ibutang '1')")
-PATIK("2. Bawasan (Ibutang '2')")
-PATIK("3. Bahinon (Ibutang '3')")
-PATIK("4. Daghanon (Ibutang '4')")
+PATIK("1. DUNGAGAN  (Ibutang '1')")
+PATIK("2. TANGGALAN (Ibutang '2')")
+PATIK("3. BAHINON   (Ibutang '3')")
+PATIK("4. DAGHANON  (Ibutang '4')")
 
 # get user input
 
 BARYABOL operasyon = IBUTANG_NUMERO()
 PATIK("")
 
+SAMTANG operasyon>4 O operasyon<1 KAY
+    PATIK("USBA! 1-4 lang gani!")
+    BARYABOL operasyon = IBUTANG_NUMERO()
+    PATIK("")
+HUMAN
+
 PATIK("Ga-himo kog math...")
 
 #doing math
-BARYABOL solusyon = KUNG operasyon == 1 KAY (num1 + num2) PUWEDEPUD operasyon == 2 KAY (num1 - num2) PUWEDEPUD operasyon == 3 KAY (num1 / num2) PUWEDEPUD operasyon == 4 KAY (num1 * num2) KUNGDILI "Mali oy! Pili ra from 1 to 4!"
+BARYABOL solusyon = KUNG operasyon == 1 KAY (num1 + num2) PUWEDEPUD operasyon == 2 KAY (num1 - num2) PUWEDEPUD operasyon == 3 KAY (num1 / num2) PUWEDEPUD operasyon == 4 KAY (num1 * num2)
 
 #print solution
 PATIK("")
 PATIK("Ang solusyon kay: ")
 PATIK(solusyon)
+PATIK("")
