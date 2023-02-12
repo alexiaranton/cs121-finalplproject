@@ -1,28 +1,28 @@
-statements  : NEWLINE* statement (NEWLINE+ statement)* NEWLINE*
+statements  : BAGONGLINYA * statement (BAGONGLINYA + statement) * BAGONGLINYA *
 
-statement		: KEYWORD:RETURN expr?
-						: KEYWORD:CONTINUE
-						: KEYWORD:BREAK
-						: expr
+statement	: SUSIPULONG: IBALIK expr?
+			: SUSIPULONG: PADAYON
+			: SUSIPULONG: PUTOL
+			: expr
 
-expr        : KEYWORD:VAR IDENTIFIER EQ expr
-            : comp-expr ((KEYWORD:AND|KEYWORD:OR) comp-expr)*
+expr        : SUSIPULONG: BARYABOL TIGPAILA EQ expr
+            : comp-expr ((SUSIPULONG: UG | SUSIPULONG: O) comp-expr)*
 
-comp-expr   : NOT comp-expr
+comp-expr   : DILI comp-expr
             : arith-expr ((EE|LT|GT|LTE|GTE) arith-expr)*
 
-arith-expr  :	term ((PLUS|MINUS) term)*
+arith-expr  : term ((DUGANG | TANGGAL) term)*
 
-term        : factor ((MUL|DIV) factor)*
+term        : factor ((DAGHANON | BAHINON) factor)*
 
-factor      : (PLUS|MINUS) factor
+factor      : (DUGANG | TANGGAL) factor
             : power
 
-power       : call (POW factor)*
+power       : call (GAHOM factor)*
 
 call        : atom (LPAREN (expr (COMMA expr)*)? RPAREN)?
 
-atom        : INT|FLOAT|STRING|IDENTIFIER
+atom        : NUMERO | LUTAW | SULAT | TIGPAILA
             : LPAREN expr RPAREN
             : list-expr
             : if-expr
@@ -32,28 +32,66 @@ atom        : INT|FLOAT|STRING|IDENTIFIER
 
 list-expr   : LSQUARE (expr (COMMA expr)*)? RSQUARE
 
-if-expr     : KEYWORD:IF expr KEYWORD:THEN
+if-expr     : SUSIPULONG: KUNG expr SUSIPULONG: KAY
               (statement if-expr-b|if-expr-c?)
-            | (NEWLINE statements KEYWORD:END|if-expr-b|if-expr-c)
+            | (BAGONGLINYA statements SUSIPULONG: HUMAN | if-expr-b | if-expr-c)
 
-if-expr-b   : KEYWORD:ELIF expr KEYWORD:THEN
-              (statement if-expr-b|if-expr-c?)
-            | (NEWLINE statements KEYWORD:END|if-expr-b|if-expr-c)
+if-expr-b   : SUSIPULONG: PUWEDEPUD expr SUSIPULONG: KAY
+              (statement if-expr-b | if-expr-c?)
+            | (BAGONGLINYA statements SUSIPULONG: HUMAN | if-expr-b | if-expr-c)
 
-if-expr-c   : KEYWORD:ELSE
+if-expr-c   : SUSIPULONG: KUNGDILI
               statement
-            | (NEWLINE statements KEYWORD:END)
+            | (BAGONGLINYA statements SUSIPULONG: HUMAN)
 
-for-expr    : KEYWORD:FOR IDENTIFIER EQ expr KEYWORD:TO expr 
-              (KEYWORD:STEP expr)? KEYWORD:THEN
+for-expr    : SUSIPULONG: PARA TIGPAILA EQ expr SUSIPULONG: SA expr
+              (SUSIPULONG: LAKANG expr)? SUSIPULONG: KAY
               statement
-            | (NEWLINE statements KEYWORD:END)
+            | (BAGONGLINYA statements SUSIPULONG: HUMAN)
 
-while-expr  : KEYWORD:WHILE expr KEYWORD:THEN
+while-expr  : SUSIPULONG: SAMTANG expr SUSIPULONG: KAY
               statement
-            | (NEWLINE statements KEYWORD:END)
+            | (BAGONGLINYA statements SUSIPULONG: HUMAN)
 
-func-def    : KEYWORD:FUN IDENTIFIER?
-              LPAREN (IDENTIFIER (COMMA IDENTIFIER)*)? RPAREN
-              (ARROW expr)
-            | (NEWLINE statements KEYWORD:END)
+func-def    : SUSIPULONG: KALIHOKAN TIGPAILA?
+              LPAREN (TIGPAILA (KOMA TIGPAILA)*)? RPAREN
+              (PANA expr)
+            | (BAGONGLINYA statements TIGPAILA: HUMAN)
+
+###########################################################
+# Translation from BISAYA to ENGLISH
+
+TOKENS:
+    'NUMERO'       = 'INT'
+    'LUTAW'        = 'FLOAT'
+    'SULAT'        = 'STRING'
+    'TIGPAILA'     = 'IDENTIFIER'
+    'SUSIPULONG'   = 'KEYWORD'
+    'DUGANG'       = 'ADD'
+    'TANGGAL'      = 'SUBTRACT'
+    'DAGHANON'     = 'MULTIPLY'
+    'BAHINON'      = 'DIVIDE'
+    'GAHOM'        = 'POWER'
+    'KOMA'         = 'COMMA'
+    'PANA'         = 'ARROW'
+    'BAGONGLINYA'  = 'NEWLINE'
+
+KEYWORDS:
+    'BARYABOL'     = 'VARIABLE'
+    'UG'           = 'AND'
+    'O'            = 'OR'
+    'DILI'         = 'NOT'
+    'KUNG'         = 'IF'
+    'PUWEDEPUD'    = 'ELIF'
+    'KUNGDILI'     = 'ELSE'
+    'PARA'         = 'FOR'
+    'SA'           = 'TO'
+    'LAKANG'       = 'STEP'
+    'SAMTANG'      = 'WHILE'
+    'KALIHOKAN'    = 'FUNCTION'
+    'KAY'          = 'THEN'
+    'HUMAN'        = 'END'
+    'IBALIK'       = 'RETURN'
+    'PADAYON'      = 'CONTINUE'
+    'PUTOL'        = 'BREAK'
+    'PATAY'        = 'KILL'
