@@ -1,9 +1,9 @@
-import basic
+import sawa
 
 while True:
 	text = input('Sawa >>> ')
 	if text.strip() == "": continue
-	result, error = basic.run('<SAWA>', text)
+	result, error = sawa.run('<SAWA>', text)
 
 	if error:
 		print(error.as_string())
